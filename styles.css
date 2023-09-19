@@ -47,6 +47,7 @@ header > nav {
     justify-content: space-between;
     background-color: #fff;
     padding: 1rem 2rem;
+    box-shadow: 0 0.01rem 0.2rem #00000033;
 }
 
 nav ul {
