@@ -1,3 +1,7 @@
+:root {
+    --body-color: #EEE;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
