@@ -17,3 +17,9 @@ ul,
 ol {
     list-style: none;
 }
+
+/* utility classes */
+
+.container {
+    display: flex;
+}
