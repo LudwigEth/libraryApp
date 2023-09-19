@@ -45,4 +45,5 @@ ol {
 
 header > nav {
     justify-content: space-between;
+    background-color: #fff;
 }
