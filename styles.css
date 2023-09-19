@@ -17,6 +17,10 @@ button {
     border: none;
 }
 
+button:active {
+    scale: 0.98;
+}
+
 ul,
 ol {
     list-style: none;
