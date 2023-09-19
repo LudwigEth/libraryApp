@@ -66,9 +66,14 @@ nav ul {
 
 /* main styles */
 
+main {
+    padding-top: 4rem;
+    background-color: inherit;
+    height: 100%;
+}
+
 /* footer styles */
 
 footer {
-    margin-top: 100%;
     padding: 1rem 0;
 }
