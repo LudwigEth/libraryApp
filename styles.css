@@ -80,6 +80,10 @@ main > div.container:nth-child(1) {
     padding-top: 3rem;
 }
 
+.addBookButton {
+    font-size: 1.5rem;
+}
+
 /* footer styles */
 
 footer {
