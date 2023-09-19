@@ -13,6 +13,10 @@ body {
     background-color: var(--body-color);
 }
 
+button {
+    border: none;
+}
+
 ul,
 ol {
     list-style: none;
