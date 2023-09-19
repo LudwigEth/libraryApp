@@ -40,3 +40,9 @@ ol {
 .max-width {
     width: 100%;
 }
+
+/* header styles */
+
+header > nav {
+    justify-content: space-between;
+}
