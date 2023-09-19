@@ -29,6 +29,10 @@ ol {
     align-items: center;
 }
 
+.flex-column {
+    flex-direction: column;
+}
+
 .flex {
     flex: 1;
 }
