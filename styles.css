@@ -47,6 +47,11 @@ ol {
 
 /* header styles */
 
+header {
+    display: block;
+    position: fixed;
+}
+
 header > nav {
     justify-content: space-between;
     background-color: #fff;
