@@ -20,6 +20,10 @@ ol {
 
 /* utility classes */
 
+.hidden {
+    display: none;
+}
+
 .container {
     display: flex;
 }
