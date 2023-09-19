@@ -36,3 +36,7 @@ ol {
 .flex {
     flex: 1;
 }
+
+.max-width {
+    width: 100%;
+}
