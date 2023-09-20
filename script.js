@@ -12,4 +12,8 @@ function addBookToLibrary(title, author, pages) {
         typeof pages !== 'number') {
             return 'invalid input';
         };
+
+    const newBook = new Book(title, author, pages);
+
+    library.push(newBook);
 };
