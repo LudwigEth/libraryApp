@@ -1,3 +1,5 @@
+const libraryGrid = document.getElementById("libraryGrid");
+
 const library = [];
 
 function Book(title, author, pages) {
