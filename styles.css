@@ -121,6 +121,25 @@ main > div.container:nth-child(1) {
     box-shadow: 0 0.05rem 0.25rem #cccccc;
 }
 
+.not-read,
+.read {
+    width: 100%;
+    padding: 0.5rem;
+}
+
+.not-read:hover,
+.read:hover {
+    opacity: 0.9;
+}
+
+.not-read {
+    background-color: #ff8888;
+}
+
+.read {
+    background-color: #a6cba4;
+}
+
 /* footer styles */
 
 footer {
