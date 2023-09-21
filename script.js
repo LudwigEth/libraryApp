@@ -27,7 +27,7 @@ const createBookCard = (title, author, pages) => {
 
     const newBookDiv = document.createElement('div');
     const bookTitleElement = document.createElement('h3');
-    const bookAuthorElement = document.createElement('address');
+    const bookAuthorElement = document.createElement('p');
     const bookPagesElement = document.createElement('p');
     const readOrNotButton = document.createElement('button')
 
