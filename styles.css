@@ -111,9 +111,10 @@ main > div.container:nth-child(1) {
     align-items: center;
     gap: 2rem;
     height: 12rem;
-    background-color: lightpink;
+    background-color: #ffd1dc;
     border-radius: 0.6rem;
     padding: 1rem;
+    box-shadow: 0 0.05rem 0.25rem #b8d8b8;
 }
 
 /* footer styles */
