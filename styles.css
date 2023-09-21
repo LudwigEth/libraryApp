@@ -114,7 +114,7 @@ main > div.container:nth-child(1) {
     background-color: #ffd1dc;
     border-radius: 0.6rem;
     padding: 1rem;
-    box-shadow: 0 0.05rem 0.25rem #b8d8b8;
+    box-shadow: 0 0.05rem 0.25rem #cccccc;
 }
 
 /* footer styles */
