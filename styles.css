@@ -17,6 +17,10 @@ button {
     border: none;
 }
 
+button:hover {
+    cursor: pointer;
+}
+
 button:active {
     scale: 0.98;
 }
@@ -91,7 +95,6 @@ main > div.container:nth-child(1) {
 
 #addBookButton:hover {
     background-color: #ffcccc80;
-    cursor: pointer;
 }
 
 /* libraryGrid */
