@@ -8,12 +8,14 @@ function Book(title, author, pages) {
     this.pages = pages;
 };
 
+const hasInvalidType = (title, author, pages) => {
+    return  typeof title !== 'string' ||
+            typeof author !== 'string' ||
+            typeof pages !== 'number'
+};
+
 function addBookToLibrary(title, author, pages) {
-    if (typeof title !== 'string' ||
-        typeof author !== 'string' ||
-        typeof pages !== 'number') {
-            return 'invalid input';
-        };
+    if (hasInvalidType(title, author, pages)) return;
 
     const newBook = new Book(title, author, pages);
 
