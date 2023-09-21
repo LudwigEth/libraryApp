@@ -95,6 +95,13 @@ main > div.container:nth-child(1) {
     cursor: pointer;
 }
 
+/* libraryGrid */
+
+.library-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
 /* footer styles */
 
 footer {
