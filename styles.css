@@ -110,8 +110,8 @@ main > div.container:nth-child(1) {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
-    height: 12rem;
+    gap: 1.5rem;
+    height: 15rem;
     background-color: #ffd1dc;
     border-radius: 0.6rem;
     padding: 1rem;
