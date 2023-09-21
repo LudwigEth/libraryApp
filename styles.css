@@ -104,6 +104,18 @@ main > div.container:nth-child(1) {
     padding: 2rem;
 }
 
+.new-book {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    height: 12rem;
+    background-color: lightpink;
+    border-radius: 0.6rem;
+    padding: 1rem;
+}
+
 /* footer styles */
 
 footer {
