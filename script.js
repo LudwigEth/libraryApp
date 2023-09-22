@@ -14,7 +14,7 @@ const hasInvalidType = (title, author, pages) => {
             typeof pages !== 'number'
 };
 
-function addBookToLibrary(title, author, pages) {
+const addBookToLibrary = (title, author, pages) => {
     if (hasInvalidType(title, author, pages)) return;
 
     const newBook = new Book(title, author, pages);
