@@ -13,6 +13,10 @@ body {
     background-color: var(--body-color);
 }
 
+main {
+    flex: auto;
+}
+
 button {
     border: none;
 }
@@ -143,6 +147,5 @@ main > div.container:nth-child(1) {
 /* footer styles */
 
 footer {
-    margin-top: auto;
     padding: 1rem 0;
 }
