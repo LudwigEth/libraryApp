@@ -1,4 +1,4 @@
-const libraryGrid = document.getElementById("libraryGrid");
+const libraryGrid = document.getElementById('libraryGrid');
 
 const library = [];
 
@@ -51,3 +51,4 @@ function createBookCard(title, author, pages) {
 
     libraryGrid.appendChild(newBookDiv);
 };
+
