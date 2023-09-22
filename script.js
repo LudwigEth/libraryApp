@@ -8,13 +8,13 @@ function Book(title, author, pages) {
     this.pages = pages;
 };
 
-const hasInvalidType = (title, author, pages) => {
+function hasInvalidType(title, author, pages) {
     return  typeof title !== 'string' ||
             typeof author !== 'string' ||
             typeof pages !== 'number'
 };
 
-const addBookToLibrary = (title, author, pages) => {
+function addBookToLibrary(title, author, pages) {
     if (hasInvalidType(title, author, pages)) return;
 
     const newBook = new Book(title, author, pages);
@@ -22,7 +22,7 @@ const addBookToLibrary = (title, author, pages) => {
     library.push(newBook);
 };
 
-const createBookCard = (title, author, pages) => {
+function createBookCard(title, author, pages) {
     if (hasInvalidType(title, author, pages)) return;
 
     const newBookDiv = document.createElement('div');
