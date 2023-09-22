@@ -159,6 +159,11 @@ main > div.container:nth-child(1) {
     gap: 1rem;
 }
 
+#bookModal input {
+    width: 13rem;
+    padding: 0.2rem 0.5rem;
+}
+
 #bookModal button {
     background-color: #a6cba4;
 }
