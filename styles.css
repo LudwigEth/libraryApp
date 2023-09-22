@@ -148,6 +148,8 @@ main > div.container:nth-child(1) {
 
 #bookModal {
     background-color: lightpink;
+    box-shadow: 0 0.25rem 0.25rem #cccccc;
+    border-radius: 0.6rem;
     width: 15rem;
     margin: auto;
     position: fixed;
