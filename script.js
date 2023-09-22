@@ -54,3 +54,29 @@ function createBookCard(title, author, pages) {
     libraryGrid.appendChild(newBookDiv);
 };
 
+
+// modal functionality
+
+function openBookModal() {
+    bookModal.showModal();
+    document.addEventListener('click', outsideBookModalClick);
+};
+
+function closeBookModal() {
+    bookModal.close();
+    document.removeEventListener('click', outsideBookModalClick);
+}
+
+function outsideBookModalClick(e) {
+    const bookModalDimensions = bookModal.getBoundingClientRect();
+    if (
+        e.clientX < bookModalDimensions.left    ||
+        e.clientX > bookModalDimensions.right   ||
+        e.clientY < bookModalDimensions.top     ||
+        e.clientY > bookModalDimensions.bottom
+    ) {
+        closeBookModal();
+    }
+};
+
+addBookButton.addEventListener('click', openBookModal);
