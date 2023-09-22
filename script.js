@@ -1,5 +1,6 @@
 const libraryGrid = document.getElementById('libraryGrid');
 const addBookButton = document.getElementById('addBookButton');
+const bookModal = document.getElementById('bookModal');
 
 const library = [];
 
