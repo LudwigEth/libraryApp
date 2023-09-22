@@ -144,6 +144,25 @@ main > div.container:nth-child(1) {
     background-color: #a6cba4;
 }
 
+/* modal styles */
+
+#bookModal {
+    background-color: lightpink;
+    width: 15rem;
+    margin: auto;
+    position: fixed;
+    padding: 1.5rem;
+    z-index: 666;
+}
+
+#bookModal form {
+    gap: 1rem;
+}
+
+#bookModal button {
+    background-color: #a6cba4;
+}
+
 /* footer styles */
 
 footer {
