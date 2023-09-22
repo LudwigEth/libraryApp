@@ -26,6 +26,23 @@
     <main class="container flex-column flex">
         <div class="container flex-column centering flex">
             <button type="button" id="addBookButton">+ Add a Book 📚</button>
+            <dialog id="bookModal" open>
+                <form id="bookForm" class="container flex-column centering">
+                    <div class="container flex-column centering">
+                        <label for="bookTitle">Title</label>
+                        <input id="bookTitle" name="bookTitle" type="text" required>
+                    </div>
+                    <div class="container flex-column centering">
+                        <label for="bookAuthor">Author</label>
+                        <input id="bookAuthor" name="bookAuthor" type="text" required>
+                    </div>
+                    <div class="container flex-column centering">
+                        <label for="bookPages">Pages</label>
+                        <input id="bookPages" name="bookPages" type="text" pattern="^[0-9]+$" required>
+                    </div>
+                    <button type="submit">add book</button>
+                </form>
+            </dialog>
         </div>
         <div class="library-grid" id="libraryGrid"></div>
     </main>
