@@ -160,6 +160,8 @@ main > div.container:nth-child(1) {
 }
 
 #bookModal input {
+    border: 1px solid rgb(255, 206, 213);
+    border-radius: 0.2rem;
     width: 13rem;
     padding: 0.2rem 0.5rem;
 }
