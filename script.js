@@ -35,25 +35,34 @@ function createBookCard(title, author, pages) {
     const bookTitleElement = document.createElement('h3');
     const bookAuthorElement = document.createElement('p');
     const bookPagesElement = document.createElement('p');
+    const buttonsContainer = document.createElement('div');
     const readOrNotButton = document.createElement('button');
+    const removeBookButton = document.createElement('button');
 
     newBookDiv.classList.add('new-book');
     bookTitleElement.classList.add('book-title');
     bookAuthorElement.classList.add('book-author');
     bookPagesElement.classList.add('book-pages');
+    buttonsContainer.classList.add('card-buttons', 'container', 'flex-column', 'centering');
     readOrNotButton.classList.add('not-read');
+    removeBookButton.classList.add('remove-button');
 
     readOrNotButton.setAttribute('type', 'button');
+    removeBookButton.setAttribute('type', 'button');
 
     bookTitleElement.textContent = title;
     bookAuthorElement.textContent = author;
     bookPagesElement.textContent = pages;
     readOrNotButton.textContent = 'not read';
+    removeBookButton.textContent = 'remove';
+
+    buttonsContainer.appendChild(readOrNotButton);
+    buttonsContainer.appendChild(removeBookButton);
 
     newBookDiv.appendChild(bookTitleElement);
     newBookDiv.appendChild(bookAuthorElement);
     newBookDiv.appendChild(bookPagesElement);
-    newBookDiv.appendChild(readOrNotButton);
+    newBookDiv.appendChild(buttonsContainer);
 
     libraryGrid.appendChild(newBookDiv);
 };
