@@ -66,13 +66,11 @@ addBookButton.addEventListener('click', openBookModal);
 function openBookModal() {
     bookModal.showModal();
     bookModal.addEventListener('click', outsideBookModalClick);
-    console.log("ez");
 };
 
 function closeBookModal() {
     bookModal.close();
     bookModal.removeEventListener('click', outsideBookModalClick);
-    console.log("pz");
 };
 
 function outsideBookModalClick(e) {
