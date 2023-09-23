@@ -7,6 +7,7 @@ const bookAuthorInput = document.getElementById('bookAuthor');
 const bookPagesInput = document.getElementById('bookPages');
 
 const library = [];
+let bookID = 0;
 
 function Book(title, author, pages) {
     this.title = title;
@@ -24,11 +25,15 @@ function addBookToLibrary(title, author, pages) {
     if (hasInvalidType(title, author, pages)) return;
 
     const newBook = new Book(title, author, pages);
+    newBook.id = bookID;
 
     library.push(newBook);
+    createBookCard(title, author, pages, bookID);
+
+    bookID++;
 };
 
-function createBookCard(title, author, pages) {
+function createBookCard(title, author, pages, bookID) {
     if (hasInvalidType(title, author, pages)) return;
 
     const newBookDiv = document.createElement('div');
@@ -47,8 +52,18 @@ function createBookCard(title, author, pages) {
     readOrNotButton.classList.add('not-read');
     removeBookButton.classList.add('remove-button');
 
+    newBookDiv.setAttribute('data-id', bookID)
     readOrNotButton.setAttribute('type', 'button');
     removeBookButton.setAttribute('type', 'button');
+
+    removeBookButton.addEventListener('click', function() {
+        newBookDiv.remove();
+
+        const bookIndex = library.findIndex(book => book.id === bookID);
+        if (bookIndex > -1) {
+            library.splice(bookIndex, 1);
+        }
+    });
 
     bookTitleElement.textContent = title;
     bookAuthorElement.textContent = author;
@@ -67,6 +82,17 @@ function createBookCard(title, author, pages) {
     libraryGrid.appendChild(newBookDiv);
 };
 
+bookForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const title = bookTitleInput.value;
+    const author = bookAuthorInput.value;
+    const pages = bookPagesInput.value;
+
+    addBookToLibrary(title, author, pages);
+
+    closeBookModal();
+});
 
 // modal functionality
 
@@ -97,16 +123,3 @@ function outsideBookModalClick(e) {
         closeBookModal();
     }
 };
-
-bookForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    const title = bookTitleInput.value;
-    const author = bookAuthorInput.value;
-    const pages = bookPagesInput.value;
-
-    addBookToLibrary(title, author, pages);
-    createBookCard(title, author, pages);
-
-    closeBookModal();
-});
