@@ -92,9 +92,11 @@ main > div.container:nth-child(1) {
 }
 
 #addBookButton {
+    width: 13rem;
     font-size: 1.5rem;
     padding: 1rem;
     border-radius: 1rem;
+    align-self: center;
 }
 
 #addBookButton:hover {
