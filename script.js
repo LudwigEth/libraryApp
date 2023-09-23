@@ -56,6 +56,18 @@ function createBookCard(title, author, pages, bookID) {
     readOrNotButton.setAttribute('type', 'button');
     removeBookButton.setAttribute('type', 'button');
 
+    readOrNotButton.addEventListener('click', function() {
+        if (readOrNotButton.classList.contains('not-read')) {
+            readOrNotButton.classList.remove('not-read');
+            readOrNotButton.classList.add('read');
+            readOrNotButton.textContent = 'read';
+        } else if (readOrNotButton.classList.contains('read')) {
+            readOrNotButton.classList.remove('read');
+            readOrNotButton.classList.add('not-read');
+            readOrNotButton.textContent = 'not read';
+        }
+    });
+
     removeBookButton.addEventListener('click', function() {
         newBookDiv.remove();
 
