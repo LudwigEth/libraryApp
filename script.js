@@ -17,7 +17,7 @@ function Book(title, author, pages) {
 function hasInvalidType(title, author, pages) {
     return  typeof title !== 'string' ||
             typeof author !== 'string' ||
-            typeof pages !== 'number'
+            typeof pages !== 'string'
 };
 
 function addBookToLibrary(title, author, pages) {
@@ -35,7 +35,7 @@ function createBookCard(title, author, pages) {
     const bookTitleElement = document.createElement('h3');
     const bookAuthorElement = document.createElement('p');
     const bookPagesElement = document.createElement('p');
-    const readOrNotButton = document.createElement('button')
+    const readOrNotButton = document.createElement('button');
 
     newBookDiv.classList.add('new-book');
     bookTitleElement.classList.add('book-title');
