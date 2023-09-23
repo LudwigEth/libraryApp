@@ -150,7 +150,8 @@ main > div.container:nth-child(1) {
 .read,
 .not-read,
 .remove-button,
-#bookModal button {
+#bookModal button,
+header li > button {
     padding: 0.5rem;
     border-radius: 0.2rem;
 }
