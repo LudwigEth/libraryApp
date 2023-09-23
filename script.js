@@ -73,11 +73,13 @@ function createBookCard(title, author, pages) {
 addBookButton.addEventListener('click', openBookModal);
 
 function openBookModal() {
+    document.body.style.filter = 'blur(0.1rem)';
     bookModal.showModal();
     bookModal.addEventListener('click', outsideBookModalClick);
 };
 
 function closeBookModal() {
+    document.body.style.filter = 'none';
     bookModal.close();
     bookModal.removeEventListener('click', outsideBookModalClick);
 };
