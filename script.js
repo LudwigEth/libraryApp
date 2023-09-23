@@ -61,15 +61,19 @@ function createBookCard(title, author, pages) {
 
 // modal functionality
 
+addBookButton.addEventListener('click', openBookModal);
+
 function openBookModal() {
     bookModal.showModal();
-    document.addEventListener('click', outsideBookModalClick);
+    bookModal.addEventListener('click', outsideBookModalClick);
+    console.log("ez");
 };
 
 function closeBookModal() {
     bookModal.close();
-    document.removeEventListener('click', outsideBookModalClick);
-}
+    bookModal.removeEventListener('click', outsideBookModalClick);
+    console.log("pz");
+};
 
 function outsideBookModalClick(e) {
     const bookModalDimensions = bookModal.getBoundingClientRect();
@@ -83,4 +87,15 @@ function outsideBookModalClick(e) {
     }
 };
 
-addBookButton.addEventListener('click', openBookModal);
+bookForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const title = bookTitleInput.value;
+    const author = bookAuthorInput.value;
+    const pages = bookPagesInput.value;
+
+    addBookToLibrary(title, author, pages);
+    createBookCard(title, author, pages);
+
+    closeBookModal();
+});
