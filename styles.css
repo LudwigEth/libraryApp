@@ -143,17 +143,18 @@ main > div.container:nth-child(1) {
 .not-read,
 .read,
 .remove-button,
-.card-buttons {
+.button-group {
     width: 100%;
 }
 
 .read,
 .not-read,
 .remove-button,
-#bookModal button,
+.modal button,
 header li > button {
     padding: 0.5rem;
     border-radius: 0.2rem;
+    text-align: center;
 }
 
 .not-read:hover,
@@ -176,34 +177,47 @@ header li > button {
     color: #a6cba4;
 }
 
-.card-buttons {
+.button-group,
+#removeBookModal div {
     gap: 0.5rem;
 }
 
 
 /* modal styles */
 
-#bookModal {
+.modal {
     background-color: rgb(255, 208, 215);
     box-shadow: 0 0.2rem 1rem #11111195;
     border: 1px solid rgb(253, 213, 233);
     border-radius: 0.6rem;
     width: 15rem;
     margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
     position: fixed;
     padding: 1.5rem;
     z-index: 666;
 }
 
-#bookModal form {
+.modal form {
     gap: 1rem;
 }
 
-#bookModal input {
+.modal input {
     border: 1px solid rgb(255, 206, 213);
     border-radius: 0.2rem;
     width: 13rem;
     padding: 0.2rem 0.5rem;
+}
+
+.confirm {
+    background-color: red;
+}
+
+.decline {
+    background-color: lightgreen;
 }
 
 /* footer styles */
