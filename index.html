@@ -26,7 +26,7 @@
     <main class="container flex-column flex">
         <div class="container flex-column">
             <button type="button" id="addBookButton">+ <span id="addBookSpan">add book</span></button>
-            <dialog id="bookModal">
+            <dialog class="modal" id="bookModal">
                 <form id="bookForm" class="container flex-column centering">
                     <div class="container flex-column centering">
                         <label for="bookTitle">Title</label>
@@ -46,7 +46,15 @@
         </div>
         <div class="library-grid" id="libraryGrid"></div>
     </main>
-
+    <dialog id="removeBookModal" class="modal">
+        <div class="container centering flex-column">
+            <strong>Are you sure you want to delete this book?</strong>
+            <div class="container centering button-group">
+                <button id="confirmRemoval" class="confirm" type="button">Yes</button>
+                <button id="declineRemoval" class="decline" type="button">No</button>
+            </div>
+        </div>
+    </dialog>
     <footer class="container max-width centering">
         <p>made by Ludwig</p>
     </footer>
