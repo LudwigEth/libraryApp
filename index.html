@@ -27,7 +27,7 @@
         <div class="container flex-column">
             <button type="button" id="addBookButton">+ <span id="addBookSpan">add book</span></button>
             <dialog class="modal" id="bookModal">
-                <form id="bookForm" class="container flex-column centering">
+                <div id="bookForm" class="container flex-column centering">
                     <div class="container flex-column centering">
                         <label for="bookTitle">Title</label>
                         <input id="bookTitle" name="bookTitle" type="text" placeholder="I wish I were a stay at home gf" required>
@@ -40,8 +40,8 @@
                         <label for="bookPages">Pages</label>
                         <input id="bookPages" name="bookPages" type="text" pattern="^[0-9]+$" placeholder="e.g. 217" required>
                     </div>
-                    <button type="submit">add book</button>
-                </form>
+                    <button id="bookFormAddBook" type="submit">add book</button>
+                </div>
             </dialog>
         </div>
         <div class="library-grid" id="libraryGrid"></div>
