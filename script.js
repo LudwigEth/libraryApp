@@ -1,7 +1,7 @@
 const libraryGrid = document.getElementById('libraryGrid');
 const addBookButton = document.getElementById('addBookButton');
 const bookModal = document.getElementById('bookModal');
-const bookForm = document.getElementById('bookForm');
+const bookFormAddBook = document.getElementById('bookFormAddBook');
 const bookTitleInput = document.getElementById('bookTitle');
 const bookAuthorInput = document.getElementById('bookAuthor');
 const bookPagesInput = document.getElementById('bookPages');
@@ -97,8 +97,7 @@ function createBookCard(title, author, pages, bookID) {
     libraryGrid.appendChild(newBookDiv);
 };
 
-bookForm.addEventListener('submit', (e) => {
-    e.preventDefault();
+bookFormAddBook.addEventListener('click', (e) => {
 
     const title = bookTitleInput.value;
     const author = bookAuthorInput.value;
