@@ -201,7 +201,8 @@ header li > button {
     z-index: 666;
 }
 
-.modal form {
+.modal form,
+#bookForm {
     gap: 1rem;
 }
 
@@ -236,5 +237,9 @@ footer {
         bottom: 2.5rem;
         right: 1.5rem;
         width: 3rem;
+    }
+    .modal {
+        top: 15vh;
+        margin: 0 auto;
     }
 }
