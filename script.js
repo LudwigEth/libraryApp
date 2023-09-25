@@ -5,9 +5,13 @@ const bookForm = document.getElementById('bookForm');
 const bookTitleInput = document.getElementById('bookTitle');
 const bookAuthorInput = document.getElementById('bookAuthor');
 const bookPagesInput = document.getElementById('bookPages');
+const removeBookModal = document.getElementById('removeBookModal');
+const confirmRemoval = document.getElementById('confirmRemoval');
+const declineRemoval = document.getElementById('declineRemoval');
 
 const library = [];
 let bookID = 0;
+let lastClickedID = 0;
 
 function Book(title, author, pages) {
     this.title = title;
@@ -48,13 +52,14 @@ function createBookCard(title, author, pages, bookID) {
     bookTitleElement.classList.add('book-title');
     bookAuthorElement.classList.add('book-author');
     bookPagesElement.classList.add('book-pages');
-    buttonsContainer.classList.add('card-buttons', 'container', 'flex-column', 'centering');
+    buttonsContainer.classList.add('button-group', 'container', 'flex-column', 'centering');
     readOrNotButton.classList.add('not-read');
     removeBookButton.classList.add('remove-button');
 
-    newBookDiv.setAttribute('data-id', bookID)
+    newBookDiv.setAttribute('data-id', bookID);
     readOrNotButton.setAttribute('type', 'button');
     removeBookButton.setAttribute('type', 'button');
+    removeBookButton.setAttribute('data-id', bookID);
 
     readOrNotButton.addEventListener('click', function() {
         if (readOrNotButton.classList.contains('not-read')) {
@@ -69,13 +74,11 @@ function createBookCard(title, author, pages, bookID) {
     });
 
     removeBookButton.addEventListener('click', function() {
-        newBookDiv.remove();
-
-        const bookIndex = library.findIndex(book => book.id === bookID);
-        if (bookIndex > -1) {
-            library.splice(bookIndex, 1);
-        }
+        removeBookModal.showModal();
+        lastClickedID = bookID;
     });
+
+
 
     bookTitleElement.textContent = title;
     bookAuthorElement.textContent = author;
@@ -104,6 +107,27 @@ bookForm.addEventListener('submit', (e) => {
     addBookToLibrary(title, author, pages);
 
     closeBookModal();
+    resetBookModalInputs();
+});
+
+// modal for removal confirmation
+
+function deleteBookCard() {
+    const bookIDtoDelete = library.findIndex(book => book.id === lastClickedID);
+    const elementToRemove = document.querySelector(`[data-id="${lastClickedID}"]`);
+    elementToRemove.remove();
+    if (bookIDtoDelete > -1) {
+        library.splice(bookIDtoDelete, 1);
+    }
+};
+
+confirmRemoval.addEventListener('click', function() {
+    removeBookModal.close();
+    deleteBookCard();
+});
+
+declineRemoval.addEventListener('click', function() {
+    removeBookModal.close();
 });
 
 // modal functionality
@@ -134,4 +158,10 @@ function outsideBookModalClick(e) {
     ) {
         closeBookModal();
     }
+};
+
+function resetBookModalInputs() {
+    bookTitleInput.value = '';
+    bookAuthorInput.value = '';
+    bookPagesInput.value = '';
 };
