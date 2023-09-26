@@ -140,6 +140,10 @@ main > div.container:nth-child(1) {
     overflow-wrap: break-word;
 }
 
+.book-author {
+    font-style: italic;
+}
+
 .not-read,
 .read,
 .remove-button,
