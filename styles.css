@@ -163,11 +163,13 @@ header li > button {
     opacity: 0.9;
 }
 
-.not-read {
+.not-read,
+.confirm {
     background-color: #ff8888;
 }
 
 .read,
+.decline,
 #bookModal button {
     background-color: #a6cba4;
 }
@@ -182,6 +184,13 @@ header li > button {
     gap: 0.5rem;
 }
 
+#confirmation-btns {
+    justify-content: space-between;
+}
+
+#removeBookName {
+    color: darkmagenta;
+}
 
 /* modal styles */
 
@@ -211,14 +220,6 @@ header li > button {
     border-radius: 0.2rem;
     width: 13rem;
     padding: 0.2rem 0.5rem;
-}
-
-.confirm {
-    background-color: red;
-}
-
-.decline {
-    background-color: lightgreen;
 }
 
 /* footer styles */
