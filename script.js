@@ -8,6 +8,7 @@ const bookPagesInput = document.getElementById('bookPages');
 const removeBookModal = document.getElementById('removeBookModal');
 const confirmRemoval = document.getElementById('confirmRemoval');
 const declineRemoval = document.getElementById('declineRemoval');
+const removeBookName = document.getElementById('removeBookName');
 
 const library = [];
 let bookID = 0;
@@ -74,8 +75,9 @@ function createBookCard(title, author, pages, bookID) {
     });
 
     removeBookButton.addEventListener('click', function() {
-        removeBookModal.showModal();
         lastClickedID = bookID;
+        removeBookModal.showModal();
+        updateBookToRemoveTitle();
     });
 
 
@@ -119,6 +121,14 @@ function deleteBookCard() {
     if (bookIDtoDelete > -1) {
         library.splice(bookIDtoDelete, 1);
     }
+};
+
+function updateBookToRemoveTitle() {
+    library.findIndex(book => {
+        if (book.id === lastClickedID) {
+            removeBookName.textContent = `"${book.title}"`;
+        };
+    });
 };
 
 confirmRemoval.addEventListener('click', function() {
