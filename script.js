@@ -102,9 +102,9 @@ function createBookCard(title, author, pages, bookID) {
 bookForm.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    const title = bookTitleInput.value;
+    const title = `"${bookTitleInput.value}"`;
     const author = bookAuthorInput.value;
-    const pages = bookPagesInput.value;
+    const pages = `${bookPagesInput.value} pages`;
 
     addBookToLibrary(title, author, pages);
 
